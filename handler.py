@@ -1,7 +1,7 @@
 def input_error(func):
-    def inner(slow=dict()):
+    def inner(*args, **kwargs):
         try:
-            func(slow)
+            func(*args, **kwargs)
         except KeyError:
             return ("Enter user name")
         except ValueError:
